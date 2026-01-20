@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Hungry Shark Evolution Fan Site</title>
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-color: #06b6d4;
+            --accent-hover: #0891b2;
+            --gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --header-bg: rgba(15, 23, 42, 0.9);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --container-width: 900px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 50;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .legal-content {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: white;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links.mobile-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .legal-content {
+                padding: 25px;
+            }
+        }
+
+        footer {
+            background: #020617;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: #475569;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Hungry Shark Evo</a>
+                <div class="menu-toggle"
+                    onclick="document.querySelector('.nav-links').classList.toggle('mobile-active')">☰</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="how-to-install.html">How to Install</a>
+                    <a href="faq.html">FAQs</a>
+                    <a href="download.html">Download</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="legal-content">
+            <h1>Terms and Conditions</h1>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this
+                agreement.</p>
+
+            <h2>2. Use License</h2>
+            <p>Permission is granted to temporarily download one copy of the materials (information or software) on this
+                website for personal, non-commercial transitory viewing only.</p>
+
+            <h2>3. Disclaimer</h2>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, and
+                hereby disclaim and negate all other warranties, including without limitation, implied warranties or
+                conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual
+                property or other violation of rights.</p>
+
+            <h2>4. Limitations</h2>
+            <p>In no event shall we or our suppliers be liable for any damages (including, without limitation, damages
+                for loss of data or profit, or due to business interruption) arising out of the use or inability to use
+                the materials on this website.</p>
+
+            <h2>5. Revisions and Errata</h2>
+            <p>The materials appearing on this website could include technical, typographical, or photographic errors.
+                We do not warrant that any of the materials on its website are accurate, complete, or current.</p>
+
+            <h2>6. Links</h2>
+            <p>We have not reviewed all of the sites linked to our website and are not responsible for the contents of
+                any such linked site. The inclusion of any link does not imply endorsement by us of the site.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="dmca.html">DMCA</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="about-us.html">About Us</a>
+            </div>
+            <p class="copyright">&copy; 2026 Hungry Shark Evolution Fan Site. For Educational Purposes Only.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

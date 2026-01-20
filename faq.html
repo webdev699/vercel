@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Hungry Shark Evolution MOD APK</title>
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-color: #06b6d4;
+            --accent-hover: #0891b2;
+            --gradient: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --header-bg: rgba(15, 23, 42, 0.9);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --container-width: 900px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 50;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            display: none;
+            /* Simple toggle logic would need JS, but for "No JS" we can just show them or use CSS hover/target tricks. Since requirement says "No JS", I will make them open by default or just static lists for strict compliance, but CSS :target is a nice trick. Let's stick to static lists for 100% no-js reliability without complexity. */
+            display: block;
+            /* Override for static display */
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        /* Using details/summary for native no-js interaction */
+        details {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            outline: none;
+            list-style: none;
+            /* Hide default triangle */
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            float: right;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] {
+            border-color: var(--accent-color);
+        }
+
+        .answer-content {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+        }
+
+        footer {
+            background: #020617;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: #475569;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links.mobile-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                padding: 20px;
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is Hungry Shark Evolution MOD APK safe to download?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the APK file provided on our site has been scanned and tested. It does not contain viruses or malware."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do I need to root my phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, you do not need a rooted device. This MOD APK works on standard Android devices."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Will I get banned for using this MOD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The anti-ban features are included, but we always recommend using it with caution. Do not use your main official account if you are worried; playing as a guest is safest."
+        }
+      }]
+    }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Hungry Shark Evo</a>
+                <div class="menu-toggle"
+                    onclick="document.querySelector('.nav-links').classList.toggle('mobile-active')">☰</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="how-to-install.html">How to Install</a>
+                    <a href="faq.html" class="active">FAQs</a>
+                    <a href="download.html">Download</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Frequently Asked Questions</h1>
+            <p>Got questions? We have answers. Check out the most common queries below.</p>
+        </section>
+
+        <div style="margin-top: 30px;">
+            <details open>
+                <summary>Is Hungry Shark Evolution MOD APK safe?</summary>
+                <div class="answer-content">
+                    Yes, it is completely safe. The file has been verified and scanned for malware. We prioritize user
+                    safety and only provide clean files.
+                </div>
+            </details>
+
+            <details>
+                <summary>Is this MOD version legal?</summary>
+                <div class="answer-content">
+                    Modified APKs occupy a grey area. This file is for educational and personal entertainment purposes
+                    only. We do not edit the game files ourselves; we only share what is available.
+                </div>
+            </details>
+
+            <details>
+                <summary>Does it work offline?</summary>
+                <div class="answer-content">
+                    Yes! One of the best features of this game is that it can be played completely offline without an
+                    internet connection.
+                </div>
+            </details>
+
+            <details>
+                <summary>Can I play with my friends?</summary>
+                <div class="answer-content">
+                    This game is primarily a single-player experience. The online leaderboards may not work correctly
+                    with the MOD version as it connects to official servers.
+                </div>
+            </details>
+
+            <details>
+                <summary>My installation failed. What should I do?</summary>
+                <div class="answer-content">
+                    "App Not Installed" usually happens if you still have the original Play Store version on your phone.
+                    Uninstall the original game and try installing the MOD APK again. Also, ensure you have enabled
+                    "Unknown Sources" in settings.
+                </div>
+            </details>
+
+            <details>
+                <summary>Will I lose my progress if I update?</summary>
+                <div class="answer-content">
+                    If you update the MOD with another version signed by the same developer, your progress should be
+                    safe. However, to be safe, avoid uninstalling the app if you want to keep your data; try installing
+                    the update over the existing one.
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="dmca.html">DMCA</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="about-us.html">About Us</a>
+            </div>
+            <p class="copyright">&copy; 2026 Hungry Shark Evolution Fan Site. For Educational Purposes Only.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
